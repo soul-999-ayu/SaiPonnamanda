@@ -1,0 +1,190 @@
+/* Reset & Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    /* Update path if necessary */
+    background-image: url("../resources/images/background.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'VT323', monospace; /* New readable font */
+    color: #333;
+}
+
+/* Main Container to center everything nicely */
+.main-container {
+    width: 100%;
+    max-width: 900px; /* Limits width on big screens */
+    margin: 0 auto;   /* Centers the container */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header {
+    color: white;
+    font-size: 3.5rem; /* Large retro text */
+    text-shadow: 4px 4px 0px #000;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Generic Box Style for all sections */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.92); /* Slightly more opaque for readability */
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    width: 100%; /* Take full width of container */
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 2px solid #000;
+}
+
+/* Typography inside boxes */
+.section-title {
+    font-size: 2rem;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #444;
+    text-decoration: underline;
+}
+
+.paragraph {
+    font-size: 1.3rem; /* Larger text for readability */
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #d32f2f;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: #ffd1d1;
+}
+
+/* Specific Styles for Scam Alert Box */
+.alert-box {
+    border: 3px solid #d32f2f;
+    background-color: rgba(255, 240, 240, 0.95);
+}
+
+.scam-title {
+    background-color: #d32f2f;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.tag-container {
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Terminal / Facts Section */
+.terminal-window {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    min-height: 100px;
+}
+
+/* Blinking Cursor Animation */
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Footer */
+.footer {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.footer a {
+    color: #ffcccc;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .main-header {
+        font-size: 2.5rem;
+    }
+    .content-box {
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .paragraph {
+        font-size: 1.2rem;
+    }
+}
+
+/* Evidence Images */
+.evidence-wrapper {
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.05);
+    padding: 15px 10px; /* Increased top/bottom padding slightly */
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.evidence-img {
+    max-width: 90%; /* Limits width to 90% of the container */
+    max-height: 500px; /* Limits height so tall screenshots don't take too much space */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Allows centering with margin */
+    margin: 0 auto 10px auto; /* Centers the image and adds bottom margin for caption */
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.img-caption {
+    display: block;
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+}
